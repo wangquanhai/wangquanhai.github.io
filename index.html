@@ -13,18 +13,18 @@
         }
         /* 去掉max-width限制，让内容占满可用宽度，减少左右空白 */
         body {
-            max-width: 100%;
+            max-width: 90%;
             margin: 30px auto;
             /* 调整padding，左侧给菜单留空间，右侧只留少量边距 */
             padding: 0 40px 0 210px;
             line-height: 1.8;
         }
-        /* 左侧固定菜单：和示例同款清爽样式 */
+        /* 左侧固定菜单 */
         .menu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 190px;
+            width: 210px;
             height: 100vh; /* 菜单高度占满屏幕 */
             background: #fff;
             border-right: 1px solid #eee; /* 右侧细边框区分菜单和内容 */
@@ -58,7 +58,7 @@
             gap: 30px;
             margin-bottom: 25px;
         }
-        /* 头像大小保持不变 */
+        /* 头像 */
         .top-box img {
             width: 240px;
             height: auto;
@@ -108,7 +108,7 @@
             margin: 15px 0;
             align-items: center;
         }
-        /* 竖版图片（前三张） */
+        /* 竖版图片 */
         .cert-vertical {
             width: 240px;
             height: auto;
@@ -116,7 +116,7 @@
             padding: 4px;
             box-shadow: 0 0 4px #eee;
         }
-        /* 横版图片（后三张） */
+        /* 横版图片 */
         .cert-horizontal {
             width: 340px;
             height: auto;
@@ -128,12 +128,13 @@
 </head>
 <body>
 
-    <!-- 左侧固定菜单（已改成示例同款样式） -->
+    <!-- 左侧固定菜单 -->
     <div class="menu">
         <h3>MENU</h3>
         <a href="#intro" class="active">个人简介</a>
         <a href="#research">研究方向</a>
         <a href="#award">获奖经历</a>
+        <a href="#paper">发表论文</a>
     </div>
 
     <!-- 顶部：左上角图片 + 右侧个人简介 -->
@@ -141,7 +142,7 @@
         <img src="images/profile.jpg" alt="王权海">
         <div class="intro">
             <h1>个人简介</h1>
-            <p>王权海，男，苗族，1973年12月生，中共党员，博士，副教授，硕士生导师，成都理工大学计算机与网络安全学院（示范性软件学院）物联网工程系专业教师。主要从事计算机、物联网、人工智能教学与科研工作，发表SCI/EI/中文核心论文10余篇，获发明专利2项，参与编写教材一部；主持参与国家级/省部级项目5项，横向科研项目多项；指导本科生参加学科竞赛获国家级、省级奖100余人次。</p>
+            <p>王权海，男，苗族，1973年12月生，中共党员，博士，副教授，硕士生导师，成都理工大学计算机与网络安全学院（示范性软件学院）物联网工程系专业教师。主要从事计算机、物联网、人工智能教学与科研工作，发表SCI/EI/中文核心论文10余篇，获发明专利2项，参与编写教材一部；主持参与国家级/省部级项目5项，横向科研项目多项；</p>
         </div>
     </div>
 
@@ -150,9 +151,9 @@
 
     <!-- 研究方向 -->
     <h2 id="research">研究方向</h2>
-    <p> </p>
-    <p> </p>
-    <p> </p>
+    <p>图像处理 </p>
+    <p>机器视觉 </p>
+    <p>深度学习</p>
 
     <!-- 分界线 -->
     <div class="line"></div>
@@ -163,16 +164,15 @@
     <h3>学生获奖经历</h3>
     <p>学生团队先后斩获国家级一等奖4项、国家级二等奖5项、以及国家级三等奖和省级奖励100余人次。</p>
 
-    <!-- 前三张：竖版放大 -->
+    <!-- 前三张 -->
     <div class="cert-box">
-        <img src="images/cert1.jpg" alt="获奖证书1" class="cert-vertical">
         <img src="images/cert2.jpg" alt="获奖证书2" class="cert-vertical">
         <img src="images/cert3.jpg" alt="获奖证书3" class="cert-vertical">
+        <img src="images/cert4.jpg" alt="获奖证书4" class="cert-vertical">
     </div>
 
-    <!-- 后三张：横版放大 -->
+    <!-- 后两张 -->
     <div class="cert-box">
-        <img src="images/cert4.jpg" alt="获奖证书4" class="cert-horizontal">
         <img src="images/cert5.jpg" alt="获奖证书5" class="cert-horizontal">
         <img src="images/cert6.jpg" alt="获奖证书6" class="cert-horizontal">
     </div>
@@ -184,6 +184,19 @@
     <p>2019年4月，荣获黑水县委、县政府"2018年度脱贫攻坚先进个人"称号；</p>
     <p>2021年6月，荣获黑水县委"脱贫攻坚突出贡献"荣誉证书；</p>
     <p>2025年9月，荣获成都理工大学"优秀教师"称号。</p>
+    
+    <!-- 分界线 -->
+    <div class="line"></div>
 
+    <!-- 发表论文 -->
+    <h2 id="paper">发表论文</h2>
+    <p>(1).王权海,苗放.提高地震数据信噪比的PCA方法.地球物理学进展.2011-06</p>
+    <p>(2).王权海,李灿平.基于XML多重数字签名方案的设计与应用.微计算机信息.2009-07</p>
+    <p>(3).王权海,苟乔欣,李树丹,闵兰,罗粟.基于Accord.NET框架的全景图自动拼接.西南师范大学学报.2015-02</p>
+    <p>(4). Wang, Quanhai ;Miao, Fang.The Support Vector Machine And Its Application To Hydrocarbon Discriminant In Oil And Gas Exploration.2012 International Conference on
+
+Systems and Informatics.2012-05</p>
+    <p>(5).Wang,Quan-Hai;Miao,Fang;Liu,Biao;Li,Can-Ping.PANORAMA IMAGE DISTORTION CORRECTION METHOD BASED ON STRAIGHT BASELINE.The IEEE International Conference on Apperceiving Computing and Intelligence Analysis 2008 Proceedings.2008-12</p>
+    
 </body>
 </html>
