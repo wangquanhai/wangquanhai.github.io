@@ -12,10 +12,42 @@
             font-family: "Microsoft YaHei", sans-serif;
         }
         body {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 30px auto;
-            padding: 0 20px;
+            padding: 0 20px 0 220px;
             line-height: 1.8;
+        }
+        /* 左侧固定菜单 */
+        .menu {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 180px;
+            background: #f5f7fa;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px #ddd;
+        }
+        .menu h3 {
+            text-align: center;
+            color: #2d5d96;
+            margin-bottom: 12px;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .menu a {
+            display: block;
+            padding: 8px 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .menu a:hover {
+            background: #2d5d96;
+            color: #fff;
         }
         /* 顶部布局：左图 + 右简介 */
         .top-box {
@@ -25,7 +57,7 @@
             margin-bottom: 25px;
         }
         .top-box img {
-            width: 180px;
+            width: 240px;
             height: auto;
             border-radius: 4px;
             box-shadow: 0 0 5px #ccc;
@@ -46,6 +78,7 @@
             margin: 20px 0 10px;
             border-left: 4px solid #2d5d96;
             padding-left: 10px;
+            scroll-margin-top: 20px;
         }
         h3 {
             font-size: 16px;
@@ -64,30 +97,48 @@
             background: #ddd;
             margin: 25px 0;
         }
-        /* 获奖图片排版 */
+        /* 获奖图片通用容器 */
         .cert-box {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
             margin: 15px 0;
+            align-items: center;
         }
-        .cert-box img {
-            width: 150px;
+        /* 竖版图片（前三张） */
+        .cert-vertical {
+            width: 240px; /* 竖图放大 */
             height: auto;
             border: 1px solid #eee;
-            padding: 3px;
+            padding: 4px;
+            box-shadow: 0 0 4px #eee;
+        }
+        /* 横版图片（后三张） */
+        .cert-horizontal {
+            width: 340px; /* 横图放大 */
+            height: auto;
+            border: 1px solid #eee;
+            padding: 4px;
+            box-shadow: 0 0 4px #eee;
         }
     </style>
 </head>
 <body>
+
+    <!-- 左侧固定菜单 -->
+    <div class="menu">
+        <h3>MENU</h3>
+        <a href="#intro">个人简介</a>
+        <a href="#research">研究方向</a>
+        <a href="#award">获奖经历</a>
+    </div>
+
     <!-- 顶部：左上角图片 + 右侧个人简介 -->
-    <div class="top-box">
-        <!-- 左上角第一张图片 -->
-        <img src="photos/profile.jpg" alt="王权海">
-        <!-- 右侧个人简介 -->
+    <div class="top-box" id="intro">
+        <img src="images/profile.jpg" alt="王权海">
         <div class="intro">
             <h1>个人简介</h1>
-            <p>王权海，男，苗族，1973年12月生，中共党员，博士，副教授，硕士生导师，成都理工大学计算机与网络安全学院（示范性软件学院）物联网工程系专业教师。主要从事计算机、物联网、人工智能教学与科研工作，发表SCI/EI/中文核心论文10余篇，获发明专利2项，参与编写教材一部；主持参与国家级/省部级项目5项，横向科研项目多项；指导本科生参加学科竞赛获国家级、省级奖100余人次。</p>
+            <p>王权海，男，苗族，1973年12月生，中共党员，博士，副教授，硕士生导师，成都理工大学计算机与网络安全学院（示范性软件学院）物联网工程系专业教师。主要从事计算机、物联网、人工智能教学与科研工作，发表SCI/EI/中文核心论文10余篇，获发明专利2项，参与编写教材一部；主持参与国家级/省部级项目5项，横向科研项目多项。</p>
         </div>
     </div>
 
@@ -95,7 +146,7 @@
     <div class="line"></div>
 
     <!-- 研究方向 -->
-    <h2>研究方向</h2>
+    <h2 id="research">研究方向</h2>
     <p> </p>
     <p> </p>
     <p> </p>
@@ -104,18 +155,23 @@
     <div class="line"></div>
 
     <!-- 获奖经历 -->
-    <h2>获奖经历</h2>
+    <h2 id="award">获奖经历</h2>
 
     <h3>学生获奖经历</h3>
     <p>学生团队先后斩获国家级一等奖4项、国家级二等奖5项、以及国家级三等奖和省级奖励100余人次。</p>
-    <!-- 六张获奖证书图片 -->
+
+    <!-- 前三张：竖版放大 -->
     <div class="cert-box">
-        <img src="photos/cert1.jpg" alt="获奖证书1">
-        <img src="photos/cert2.jpg" alt="获奖证书2">
-        <img src="photos/cert3.jpg" alt="获奖证书3">
-        <img src="photos/cert4.jpg" alt="获奖证书4">
-        <img src="photos/cert5.jpg" alt="获奖证书5">
-        <img src="photos/cert6.jpg" alt="获奖证书6">
+        <img src="images/cert1.jpg" alt="获奖证书1" class="cert-vertical">
+        <img src="images/cert2.jpg" alt="获奖证书2" class="cert-vertical">
+        <img src="images/cert3.jpg" alt="获奖证书3" class="cert-vertical">
+    </div>
+
+    <!-- 后三张：横版放大 -->
+    <div class="cert-box">
+        <img src="images/cert4.jpg" alt="获奖证书4" class="cert-horizontal">
+        <img src="images/cert5.jpg" alt="获奖证书5" class="cert-horizontal">
+        <img src="images/cert6.jpg" alt="获奖证书6" class="cert-horizontal">
     </div>
 
     <h3>个人获奖经历</h3>
